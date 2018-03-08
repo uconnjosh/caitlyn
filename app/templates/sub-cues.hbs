@@ -1,0 +1,12 @@
+<h1>Caitlyn, Good Morning!</h1>
+<br />
+{{#each model as |cue|}}
+  <h4>{{cue.title}}</h4>
+  <p>{{cue.text}}</p>
+  <br />
+
+  {{#each cue.subCues as |subCue|}}
+    <h4>{{subCue.title}}</h4>
+  {{/each}}
+{{/each}}
+{{outlet}}
