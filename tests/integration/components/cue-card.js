@@ -3,22 +3,22 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | sub-cue', function(hooks) {
+module('Integration | Component | cue-card', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{sub-cue}}`);
+    await render(hbs`{{cue-card}}`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      {{#sub-cue}}
+      {{#cue-card}}
         template block text
-      {{/sub-cue}}
+      {{/cue-card}}
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');

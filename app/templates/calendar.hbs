@@ -2,14 +2,7 @@
 
 {{#each model as |calendar| }}
 	{{#each calendar.cues as |cue|}}
-	  {{sub-cue cue=cue}}
-	  {{!-- <h4>{{cue.title}}</h4>
-	  <p>{{cue.text}}</p>
-	  <br />
-
-	  {{#each cue.subCues as |subCue|}}
-	    <h4>{{subCue.title}}</h4>
-	  {{/each}} --}}
+	  {{cue-card cue=cue}}
 	{{/each}}
 {{/each}}
 {{outlet}}
