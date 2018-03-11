@@ -1,6 +1,19 @@
-{{cue.title}}
-{{cue.text}}
+<div class="cue">
+	<h1>{{cue.title}}</h1>
+	<div class="cue__start-by">
+	  <h4>Start by: {{cue.startBy}} .... in about 30 minutes</h4>
+	</div>
+	<div class="cue__steps">
+	  {{cue.text}}:
+	  <ul class="subcue__list">
+		  {{#each cue.subCues as |cue|}}
+		    <li class="subcue"><p>{{cue.title}}</p><img src="/assets/images/nav_next.svg" /></li>
+		  {{/each}}
+		 </ul>
+	</div>
 
-{{#each cue.subCues as |cue|}}
-  {{cue-card cue=cue}}
-{{/each}}
+
+	{{!-- {{#each cue.subCues as |cue|}}
+	  {{cue-card cue=cue}}
+	{{/each}} --}}
+</div>

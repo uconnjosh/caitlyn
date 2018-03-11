@@ -7,8 +7,6 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  // TODO: remove instructions route
-  this.route('instructions');
   this.route('cues');
   this.route('calendar');
 });

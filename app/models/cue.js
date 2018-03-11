@@ -28,7 +28,7 @@ Cue.reopenClass({
 	  },
 	  {
 	    id: 3,
-	    title: "Get dressed",
+	    title: "Get Dressed",
 	    text: "Choose clothes to wear and dress yourself for the day. Keep the weather in mind!",
 	    subCues: [4, 5, 6]
 	    // TODO: Utilize a service that displays on image of what to wear based on weather

@@ -1,3 +1,54 @@
 body {
+	box-sizing: border-box;
   font-family: 'Andika', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.cue {
+	padding: 22px;
+	border-radius: 12px;
+  background-color: #F9F8D3;
+  min-height: 90vh;
+}
+
+.cue__start-by {
+  margin-left: 1em;
+}
+
+.cue__steps {
+  margin-top: 3em;
+}
+
+.subcue__list {
+  width: calc(100% + 22px);
+}
+
+.subcue {
+	position: relative;
+  margin: 8px 0;
+  padding: 8px 22px;
+  background-color: #AED8E5;
+  font-size: 20px;
+  * {
+    vertical-align: middle;
+  }
+  p {
+    display: inline-block;
+  }
+  img {
+  	position: absolute;
+  	width: 48px;
+  	right: 0;
+  	top: 50%;
+  	transform: translateY(-50%);
+  }
 }
