@@ -12,6 +12,9 @@ ul {
   padding: 0;
 }
 
+.button {
+  border-radius: 10px;
+}
 
 .cue {
 	padding: 22px;
@@ -34,6 +37,24 @@ ul {
 
 .subcue__list {
   width: calc(100% + 22px);
+}
+
+.cue__back {
+  background-color: #9fd1e0;
+  position: relative;
+  right: 23px;
+  margin-bottom: 12px;
+  * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  > p {
+    font-size: 1.4em;
+  }
+  > img {
+    transform: rotate(180deg);
+    width: 58px;
+  }
 }
 
 .subcue {

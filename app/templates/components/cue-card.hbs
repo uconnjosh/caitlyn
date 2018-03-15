@@ -1,6 +1,9 @@
 <div class="cue">
   {{#if cue.superCue}}
-    <button {{action "toggleCue" cue.superCue}} class="back">BACK</button>
+    <div class="cue__back button" {{action "toggleCue" cue.superCue}}>
+      <img src="/assets/images/nav_next.svg" />
+      <p>{{cue.superCue.title}}</p>
+    </div>
   {{/if}}
 	<h1>{{cue.title}}</h1>
 	<div class="cue__start-by">
@@ -12,7 +15,7 @@
 	  {{cue.text}}
 	  <ul class="subcue__list">
 		  {{#each cue.subCues as |subCue|}}
-		    <li class="subcue" {{action "toggleCue" subCue}}>
+		    <li class="subcue button" {{action "toggleCue" subCue}}>
 		      <p>{{subCue.title}}</p>
 			     <img src="/assets/images/nav_next.svg" />
 			   </li>
