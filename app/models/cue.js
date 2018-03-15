@@ -4,6 +4,7 @@ var Cue = DS.Model.extend({
   title: DS.attr('string'),
   text: DS.attr('string'),
   startBy: DS.attr('string'),
+  images: DS.attr(),
   subCues: DS.hasMany('cue', { inverse: 'superCue'}),
   superCue: DS.belongsTo('cue', { inverse: 'subCues' })
 
@@ -25,6 +26,7 @@ Cue.reopenClass({
 	    id: 2,
 	    title: "Brush Teeth",
 	    text: "Brush teeth for two minutes",
+	    images: ["/assets/images/toothbrush.png"]
 	  },
 	  {
 	    id: 3,
@@ -35,16 +37,19 @@ Cue.reopenClass({
 	  },
 	  {
 	    id: 4,
-	    title: "Underwear"
+	    title: "Underwear",
+	    images: ["/assets/images/underwear.jpeg"]
 	  },
 	  {
 	    id: 5,
 	    title: "Shirt",
-	    text: "You might need a sweater too if it's chilly today"
+	    text: "You might need a sweater too if it's chilly today",
+	    images: ["/assets/images/shirt.jpg"]
 	  },
 	  {
 	    id: 6,
 	    title: "Pants",
+	    images: ["/assets/images/pants.jpeg"]
 	  }
   ]
 })

@@ -1,19 +1,25 @@
 <div class="cue">
+  {{#if cue.superCue}}
+    <button {{action "toggleCue" cue.superCue}} class="back">BACK</button>
+  {{/if}}
 	<h1>{{cue.title}}</h1>
 	<div class="cue__start-by">
-	  <h4>Start by: {{cue.startBy}} .... in about 30 minutes</h4>
+		{{#if cue.startBy}}
+	    <h4>Start by: {{cue.startBy}} .... in about 30 minutes</h4>
+	  {{/if}}
 	</div>
 	<div class="cue__steps">
-	  {{cue.text}}:
+	  {{cue.text}}
 	  <ul class="subcue__list">
-		  {{#each cue.subCues as |cue|}}
-		    <li class="subcue"><p>{{cue.title}}</p><img src="/assets/images/nav_next.svg" /></li>
+		  {{#each cue.subCues as |subCue|}}
+		    <li class="subcue" {{action "toggleCue" subCue}}>
+		      <p>{{subCue.title}}</p>
+			     <img src="/assets/images/nav_next.svg" />
+			   </li>
 		  {{/each}}
-		 </ul>
+		</ul>
+		{{#each cue.images as |imgSrc|}}
+		  <img class="cue__img" src={{imgSrc}} />
+		{{/each}}
 	</div>
-
-
-	{{!-- {{#each cue.subCues as |cue|}}
-	  {{cue-card cue=cue}}
-	{{/each}} --}}
 </div>
