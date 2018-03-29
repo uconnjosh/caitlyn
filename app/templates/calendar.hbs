@@ -1,6 +1,7 @@
-{{#each model as |calendar| }}
+{{moment (now) 'LLLL'}}
+{{!-- {{#each model as |calendar| }}
 	{{#each calendar.cues as |cue|}}
 	  {{cue-card cue=cue}}
 	{{/each}}
-{{/each}}
+{{/each}} --}}
 {{outlet}}

@@ -7,8 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('cues');
   this.route('calendar');
+  this.route('cue', { path: '/calendar/:cue_id' });
 });
 
 export default Router;
