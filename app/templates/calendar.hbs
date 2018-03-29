@@ -1,7 +1,8 @@
 {{moment (now) 'LLLL'}}
-{{!-- {{#each model as |calendar| }}
-	{{#each calendar.cues as |cue|}}
-	  {{cue-card cue=cue}}
+{{#each model as |calendar| }}
+  {{#each calendar.cues as |cue|}}
+		<ul>
+		  {{#link-to "cue" cue}}<li>{{cue.title}}</li>{{/link-to}}
+		</ul>
 	{{/each}}
-{{/each}} --}}
-{{outlet}}
+{{/each}}
