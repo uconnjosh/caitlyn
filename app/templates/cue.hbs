@@ -1,1 +1,33 @@
-{{cue-card cue=model}}
+{{#link-to "calendar"}}<button>Calendar</button>{{/link-to}}
+<div class="cue">
+  {{#if model.superCue}}
+    {{#link-to "cue" model.superCue}}
+	    <div class="cue__back button">
+	      <img src="/assets/images/nav_next.svg" />
+	      <p>{{model.superCue.title}}</p>
+	    </div>
+	  {{/link-to}}
+  {{/if}}
+	<h1>{{model.title}}</h1>
+	<div class="cue__start-by">
+		{{#if model.startBy}}
+	    <h4>Start by: {{model.startBy}} .... in about 30 minutes</h4>
+	  {{/if}}
+	</div>
+	<div class="cue__steps">
+	  {{model.text}}
+	  <ul class="subcue__list">
+		  {{#each model.subCues as |subCue|}}
+		    {{#link-to "cue" subCue}}
+			    <li class="subcue button">
+			      <p>{{subCue.title}}</p>
+				     <img src="/assets/images/nav_next.svg" />
+				   </li>
+				 {{/link-to}}
+		  {{/each}}
+		</ul>
+		{{#each model.images as |imgSrc|}}
+		  <img class="cue__img" src={{imgSrc}} />
+		{{/each}}
+	</div>
+</div>
