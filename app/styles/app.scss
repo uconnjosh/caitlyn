@@ -40,6 +40,18 @@ a {
   max-width: 80%;
 }
 
+.cue__link {
+  display: inline-block;
+  &.complete {
+    color: grey;
+    text-decoration: line-through;
+  }
+}
+
+.cue__finished {
+  display: inline;
+}
+
 .subcue__list {
   width: calc(100% + 22px);
 }

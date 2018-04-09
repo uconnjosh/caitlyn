@@ -2,7 +2,10 @@
 {{#each model as |calendar| }}
   {{#each calendar.cues as |cue|}}
 		<ul>
-		  {{#link-to "cue" cue}}<li>{{cue.title}}</li>{{/link-to}}
+			<li>
+			  {{#link-to "cue" cue}}<h4 class="cue__link {{if cue.complete 'complete'}}">{{cue.title}}</h4>{{/link-to}}
+			  {{input type="checkbox" checked=cue.complete class="cue__finished"}}
+		  </li>
 		</ul>
 	{{/each}}
 {{/each}}

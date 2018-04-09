@@ -6,7 +6,8 @@ var Cue = DS.Model.extend({
   startBy: DS.attr('string'),
   images: DS.attr(),
   subCues: DS.hasMany('cue', { inverse: 'superCue'}),
-  superCue: DS.belongsTo('cue', { inverse: 'subCues' })
+  superCue: DS.belongsTo('cue', { inverse: 'subCues' }),
+  complete: DS.attr('boolean')
 
   // TODO: structure so that we have sum the duration of subcues to get a start_by time which reflects
   // when the cue needs to be started to finish on time?
